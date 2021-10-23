@@ -1,7 +1,7 @@
 import React from 'react';
 
 import WeightDate from './WeightDate';
-import Card from '../UI/Card';
+import Card from '../../UI/Card';
 import './WeightItem.css';
 
 const WeightItem = (props) => {

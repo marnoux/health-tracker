@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import Card from '../UI/Card';
+import Card from '../../UI/Card';
 import WeightsFilter from './WeightsFilter';
 import './Weights.css';
 import WeightsList from './WeightsList';

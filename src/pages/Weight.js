@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Newweight from '../components/NewWeight/NewWeight';
-import Weights from '../components/Weights/Weights';
+import NewWeight from '../components/Weight/NewWeight/NewWeight';
+import Weights from '../components/Weight/Weights/Weights';
 
 const DUMMY_WEIGHTS = [
 	{ id: 'e1', amount: 89, date: new Date(2020, 1, 1), unit: 'kg' },
@@ -26,7 +26,7 @@ const Weight = () => {
 
 	return (
 		<div>
-			<Newweight onAddWeight={addWeightsHandler} />
+			<NewWeight onAddWeight={addWeightsHandler} />
 			<Weights items={weights} />
 		</div>
 	);

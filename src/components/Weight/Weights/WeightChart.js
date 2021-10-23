@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Chart from '../Chart/Chart';
+import Chart from '../../Chart/Chart';
 
 const WeightsChart = (props) => {
 	const chartDataPoints = [
