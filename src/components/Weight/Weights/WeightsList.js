@@ -17,7 +17,7 @@ const WeightsList = (props) => {
 			{props.items.map((weight) => (
 				<WeightItem
 					key={weight.id}
-					title={weight.title}
+					unit={weight.unit}
 					amount={weight.amount}
 					date={weight.date}
 				/>

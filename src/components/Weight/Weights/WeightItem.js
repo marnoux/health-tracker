@@ -8,8 +8,9 @@ const WeightItem = (props) => {
 	return (
 		<Card className='weight-item'>
 			<WeightDate date={props.date} />
-			<div className='weight-item__kg'>{props.amount}</div>
-			<div>{props.unit}</div>
+			<div className='weight-item__kg'>
+				{props.amount} {props.unit}
+			</div>
 		</Card>
 	);
 };

@@ -16,6 +16,11 @@ const MainHeader = () => {
 							Weight
 						</NavLink>
 					</li>
+					<li>
+						<NavLink activeClassName={classes.active} to='/glucose'>
+							Blood Clucose
+						</NavLink>
+					</li>
 				</ul>
 			</nav>
 		</header>
