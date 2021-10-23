@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Route } from 'react-router-dom';
 
 import Welcome from './pages/Welcome';
 import MainHeader from './components/UI/MainHeader';
 import Weight from './pages/Weight';
 import BloodGlucose from './pages/BloodGlucose';
+import BloodPressure from './pages/BloodPressure';
 
 const App = () => {
 	return (
@@ -20,6 +21,9 @@ const App = () => {
 					</Route>
 					<Route path='/glucose'>
 						<BloodGlucose />
+					</Route>
+					<Route path='/pressure'>
+						<BloodPressure />
 					</Route>
 				</main>
 			</div>

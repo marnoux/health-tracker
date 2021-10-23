@@ -2,7 +2,7 @@ import React from 'react';
 
 import Chart from '../../UI/Chart/Chart';
 
-const WeightsChart = (props) => {
+const PressuresChart = (props) => {
 	const chartDataPoints = [
 		{ label: 'Jan', value: 0 },
 		{ label: 'Feb', value: 0 },
@@ -18,12 +18,12 @@ const WeightsChart = (props) => {
 		{ label: 'Dec', value: 0 },
 	];
 
-	for (const weight of props.weights) {
-		const weightMonth = weight.date.getMonth();
-		chartDataPoints[weightMonth].value += weight.amount;
+	for (const pressure of props.pressures) {
+		const pressureMonth = pressure.date.getMonth();
+		chartDataPoints[pressureMonth].value += pressure.amount;
 	}
 
 	return <Chart dataPoints={chartDataPoints} />;
 };
 
-export default WeightsChart;
+export default PressuresChart;

@@ -21,6 +21,11 @@ const MainHeader = () => {
 							Blood Clucose
 						</NavLink>
 					</li>
+					<li>
+						<NavLink activeClassName={classes.active} to='/pressure'>
+							Blood Pressure
+						</NavLink>
+					</li>
 				</ul>
 			</nav>
 		</header>

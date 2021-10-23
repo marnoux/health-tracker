@@ -1,0 +1,38 @@
+.new-glucos {
+	background-color: #5fafff;
+	padding: 1rem;
+	margin: 2rem auto;
+	width: 50rem;
+	max-width: 95%;
+	border-radius: 12px;
+	text-align: center;
+	box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+}
+
+.new-glucos button {
+	font: inherit;
+	cursor: pointer;
+	padding: 1rem 2rem;
+	border: 1px solid #3070ce;
+	background-color: #3070ce;
+	color: white;
+	border-radius: 12px;
+	margin-right: 1rem;
+}
+
+.new-glucos button:hover,
+.new-glucos button:active {
+	background-color: #3779ed;
+	border-color: #3779ed;
+}
+
+.new-glucos button.alternative {
+	color: #3070ce;
+	border-color: transparent;
+	background-color: transparent;
+}
+
+.new-glucos button.alternative:hover,
+.new-glucos button.alternative:active {
+	background-color: #5fafff;
+}

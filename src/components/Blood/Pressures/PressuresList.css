@@ -1,0 +1,9 @@
+.pressure-list {
+  list-style: none;
+  padding: 0;
+}
+
+.pressure-list__fallback {
+  color: white;
+  text-align: center;
+}

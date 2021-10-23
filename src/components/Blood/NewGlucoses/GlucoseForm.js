@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
-import './BloodGlucoseForm.css';
+import './GlucoseForm.css';
 
-const BloodGlucoseForm = (props) => {
+const GlucoseForm = (props) => {
 	const [enteredUnit, setenteredUnit] = useState('');
 	const [enteredAmount, setEnteredAmount] = useState('');
 	const [enteredDate, setEnteredDate] = useState('');
@@ -22,21 +22,21 @@ const BloodGlucoseForm = (props) => {
 	const submitHandler = (event) => {
 		event.preventDefault();
 
-		const bloodGlucosData = {
+		const glucosData = {
 			unit: enteredUnit,
 			amount: +enteredAmount,
 			date: new Date(enteredDate),
 		};
 
-		props.onSavebloodGlucosData(bloodGlucosData);
+		props.onSaveglucosData(glucosData);
 		setenteredUnit('');
 		setEnteredAmount('');
 		setEnteredDate('');
 	};
 	return (
 		<form onSubmit={submitHandler}>
-			<div className='new-bloodGlucos__controls'>
-				<div className='new-bloodGlucos__control'>
+			<div className='new-glucos__controls'>
+				<div className='new-glucos__control'>
 					<label>Date</label>
 					<input
 						type='date'
@@ -46,7 +46,7 @@ const BloodGlucoseForm = (props) => {
 						onChange={dateChangeHandler}
 					/>
 				</div>
-				<div className='new-bloodGlucos__control'>
+				<div className='new-glucos__control'>
 					<label>Blood Glucos Level</label>
 					<input
 						type='number'
@@ -56,7 +56,7 @@ const BloodGlucoseForm = (props) => {
 						onChange={amountChangeHandler}
 					/>
 				</div>
-				<div className='new-bloodGlucos__control'>
+				<div className='new-glucos__control'>
 					<label>Unit</label>
 					<select value={enteredUnit} onChange={unitChangeHandler}>
 						<option value=''></option>
@@ -65,7 +65,7 @@ const BloodGlucoseForm = (props) => {
 					</select>
 				</div>
 			</div>
-			<div className='new-bloodGlucos__actions'>
+			<div className='new-glucos__actions'>
 				<button type='Button' onClick={props.onCancel}>
 					Cancel
 				</button>
@@ -75,4 +75,4 @@ const BloodGlucoseForm = (props) => {
 	);
 };
 
-export default BloodGlucoseForm;
+export default GlucoseForm;

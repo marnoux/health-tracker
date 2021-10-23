@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import BloodClucoses from '../components/BloodGlucose/BloodGlucoses/BloodGlucoses';
-import NewBloodGlucose from '../components/BloodGlucose/NewBloodGlucoses/NewBloodGlucose';
+import BloodClucoses from '../components/Blood/Glucoses/Glucoses';
+import NewBloodGlucose from '../components/Blood/NewGlucoses/NewGlucose';
 
 const DUMMY_GLUCOSES = [
 	{ id: 'e1', amount: 57, date: new Date(2020, 1, 14), unit: 'mmol/L' },

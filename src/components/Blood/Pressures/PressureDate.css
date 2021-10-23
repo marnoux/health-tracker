@@ -1,4 +1,4 @@
-.bloodGlucos-date {
+.pressure-date {
 	display: flex;
 	flex-direction: column;
 	width: 20rem;
@@ -12,16 +12,16 @@
 	margin-right: 0.5rem;
 }
 
-.bloodGlucos-date__month {
+.pressure-date__month {
 	font-size: 0.75rem;
-	font-bloodGlucos: bold;
+	font-weight: bold;
 }
 
-.bloodGlucos-date__year {
+.pressure-date__year {
 	font-size: 0.75rem;
 }
 
-.bloodGlucos-date__day {
+.pressure-date__day {
 	font-size: 1.5rem;
-	font-bloodGlucos: bold;
+	font-weight: bold;
 }

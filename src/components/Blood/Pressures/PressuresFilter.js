@@ -1,15 +1,15 @@
 import React from 'react';
 
-import './BloodGlucosesFilter.css';
+import './PressuresFilter.css';
 
-const BloodGlucosesFilter = (props) => {
+const PressuresFilter = (props) => {
 	const dropdownChangeHandler = (event) => {
 		props.onChangeFilter(event.target.value);
 	};
 
 	return (
-		<div className='bloodGlucoss-filter'>
-			<div className='bloodGlucoss-filter__control'>
+		<div className='pressure-filter'>
+			<div className='pressure-filter__control'>
 				<label>Filter by year</label>
 				<select value={props.selected} onChange={dropdownChangeHandler}>
 					{/* Adding a hardcoded list of dates for now, will change later */}
@@ -24,4 +24,4 @@ const BloodGlucosesFilter = (props) => {
 	);
 };
 
-export default BloodGlucosesFilter;
+export default PressuresFilter;

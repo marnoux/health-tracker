@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 
-import BloodGlucoseForm from './BloodGlucoseForm';
-import './NewBloodGlucose.css';
+import GlucoseForm from './GlucoseForm';
+import './NewGlucose.css';
 
-const NewBloodGlucose = (props) => {
+const NewGlucose = (props) => {
 	const [isEditing, setIsEditing] = useState(false);
 
-	const savebloodGlucosDataHandler = (enteredbloodGlucosData) => {
-		const bloodGlucosData = {
-			...enteredbloodGlucosData,
+	const saveglucosDataHandler = (enteredglucosData) => {
+		const glucosData = {
+			...enteredglucosData,
 			id: Math.random().toString(),
 		};
-		props.onAddBloodGlucos(bloodGlucosData);
+		props.onAddGlucos(glucosData);
 		setIsEditing(false);
 	};
 
@@ -24,13 +24,13 @@ const NewBloodGlucose = (props) => {
 	};
 
 	return (
-		<div className='new-bloodGlucos'>
+		<div className='new-glucos'>
 			{!isEditing && (
 				<button onClick={startEditingHandler}>Log Blood Glucos</button>
 			)}
 			{isEditing && (
-				<BloodGlucoseForm
-					onSavebloodGlucosData={savebloodGlucosDataHandler}
+				<GlucoseForm
+					onSaveglucosData={saveglucosDataHandler}
 					onCancel={stopEditingHandler}
 				/>
 			)}
@@ -38,4 +38,4 @@ const NewBloodGlucose = (props) => {
 	);
 };
 
-export default NewBloodGlucose;
+export default NewGlucose;
