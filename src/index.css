@@ -1,13 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+/* I use index.css for styles that should be applied globally */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-family: 'Noto Sans JP', sans-serif;
+}
 
 body {
 	margin: 0;
-	font-family: 'Lato', sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+	background-color: #3a4963;
 }
 
-code {
-	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-		monospace;
+.App {
+	text-align: center;
+}
+
+a,
+p,
+h1,
+h2,
+h3,
+h4 {
+	color: white;
 }
