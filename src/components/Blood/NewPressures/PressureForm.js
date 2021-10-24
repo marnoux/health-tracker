@@ -22,21 +22,21 @@ const PressureForm = (props) => {
 	const submitHandler = (event) => {
 		event.preventDefault();
 
-		const glucosData = {
+		const pressureData = {
 			unit: enteredUnit,
 			amount: +enteredAmount,
 			date: new Date(enteredDate),
 		};
 
-		props.onSaveglucosData(glucosData);
+		props.onSaveglucosData(pressureData);
 		setenteredUnit('');
 		setEnteredAmount('');
 		setEnteredDate('');
 	};
 	return (
 		<form onSubmit={submitHandler}>
-			<div className='new-glucos__controls'>
-				<div className='new-glucos__control'>
+			<div className='new-pressure__controls'>
+				<div className='new-pressure__control'>
 					<label>Date</label>
 					<input
 						type='date'
@@ -46,7 +46,7 @@ const PressureForm = (props) => {
 						onChange={dateChangeHandler}
 					/>
 				</div>
-				<div className='new-glucos__control'>
+				<div className='new-pressure__control'>
 					<label>Blood Glucos Level</label>
 					<input
 						type='number'
@@ -55,8 +55,15 @@ const PressureForm = (props) => {
 						value={enteredAmount}
 						onChange={amountChangeHandler}
 					/>
+					<input
+						type='number'
+						min='1'
+						step='1'
+						value={enteredAmount}
+						onChange={amountChangeHandler}
+					/>
 				</div>
-				<div className='new-glucos__control'>
+				<div className='new-pressure__control'>
 					<label>Unit</label>
 					<select value={enteredUnit} onChange={unitChangeHandler}>
 						<option value=''></option>
@@ -65,7 +72,7 @@ const PressureForm = (props) => {
 					</select>
 				</div>
 			</div>
-			<div className='new-glucos__actions'>
+			<div className='new-pressure__actions'>
 				<button type='Button' onClick={props.onCancel}>
 					Cancel
 				</button>

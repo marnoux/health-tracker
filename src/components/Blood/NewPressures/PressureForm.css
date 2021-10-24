@@ -1,4 +1,4 @@
-.new-glucos__controls {
+.new-pressure__controls {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 1rem;
@@ -6,13 +6,13 @@
 	text-align: left;
 }
 
-.new-glucos__control label {
+.new-pressure__control label {
 	font-weight: bold;
 	margin-bottom: 0.5rem;
 	display: block;
 }
 
-.new-glucos__control input {
+.new-pressure__control input {
 	font: inherit;
 	padding: 0.5rem;
 	border-radius: 6px;
@@ -20,7 +20,7 @@
 	width: 20rem;
 	max-width: 100%;
 }
-.new-glucos__control select {
+.new-pressure__control select {
 	font: inherit;
 	padding: 0.5rem;
 	border-radius: 6px;
@@ -29,6 +29,6 @@
 	max-width: 100%;
 }
 
-.new-glucos__actions {
+.new-pressure__actions {
 	text-align: right;
 }

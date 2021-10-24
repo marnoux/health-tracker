@@ -13,7 +13,7 @@ const App = () => {
 			<div className='App'>
 				<MainHeader />
 				<main>
-					<Route path='/'>
+					<Route path='/welcome'>
 						<Welcome />
 					</Route>
 					<Route path='/weight'>
