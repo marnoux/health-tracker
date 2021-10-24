@@ -18,7 +18,8 @@ const PressuresList = (props) => {
 				<PressureItem
 					key={pressure.id}
 					unit={pressure.unit}
-					amount={pressure.amount}
+					systolicAmount={pressure.systolicAmount}
+					diastolicAmount={pressure.diastolicAmount}
 					date={pressure.date}
 				/>
 			))}

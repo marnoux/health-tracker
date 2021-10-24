@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Card from '../../UI/Card';
 import PressuresFilter from './PressuresFilter';
 import PressuresList from './PressuresList';
+import PressureAverage from './PressureAverage';
 
 import './Pressures.css';
 
@@ -25,6 +26,7 @@ const Pressures = (props) => {
 					onChangeFilter={filterChangeHandler}
 				/>
 				<PressuresList items={filteredPressures} />
+				<PressureAverage amounts={filteredPressures} />
 			</Card>
 		</li>
 	);

@@ -5,6 +5,7 @@ import GlucosesFilter from './GlucosesFilter';
 import './Glucoses.css';
 import GlucosesList from './GlucosesList';
 import GlucoseChart from './GlucoseChart';
+import GlucoseAverage from './GlucoseAverage';
 
 const Glucoses = (props) => {
 	const [filteredYear, setFilteredYear] = useState('2021');
@@ -26,6 +27,7 @@ const Glucoses = (props) => {
 				/>
 				<GlucoseChart glucoss={filteredGlucoses} />
 				<GlucosesList items={filteredGlucoses} />
+				<GlucoseAverage amounts={filteredGlucoses} />
 			</Card>
 		</li>
 	);

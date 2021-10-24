@@ -3,16 +3,20 @@ import React, { useState } from 'react';
 import './PressureForm.css';
 
 const PressureForm = (props) => {
-	const [enteredUnit, setenteredUnit] = useState('');
-	const [enteredAmount, setEnteredAmount] = useState('');
+	const [enteredUnit, setenteredUnit] = useState('mmHg');
+	const [enteredSystolicAmount, setEnteredSystolicAmount] = useState('');
+	const [enteredDiastolicAmount, setEnteredDiastolicAmount] = useState('');
 	const [enteredDate, setEnteredDate] = useState('');
 
 	const unitChangeHandler = (event) => {
 		setenteredUnit(event.target.value);
 	};
 
-	const amountChangeHandler = (event) => {
-		setEnteredAmount(event.target.value);
+	const systolicAmountChangeHandler = (event) => {
+		setEnteredSystolicAmount(event.target.value);
+	};
+	const diastolicAmountChangeHandler = (event) => {
+		setEnteredDiastolicAmount(event.target.value);
 	};
 
 	const dateChangeHandler = (event) => {
@@ -24,13 +28,15 @@ const PressureForm = (props) => {
 
 		const pressureData = {
 			unit: enteredUnit,
-			amount: +enteredAmount,
+			systolicAmount: +enteredSystolicAmount,
+			diastolicAmount: +enteredDiastolicAmount,
 			date: new Date(enteredDate),
 		};
 
 		props.onSaveglucosData(pressureData);
 		setenteredUnit('');
-		setEnteredAmount('');
+		setEnteredSystolicAmount('');
+		setEnteredDiastolicAmount('');
 		setEnteredDate('');
 	};
 	return (
@@ -47,29 +53,33 @@ const PressureForm = (props) => {
 					/>
 				</div>
 				<div className='new-pressure__control'>
-					<label>Blood Glucos Level</label>
+					<label>Top Number</label>
 					<input
 						type='number'
 						min='1'
 						step='1'
-						value={enteredAmount}
-						onChange={amountChangeHandler}
+						value={enteredSystolicAmount}
+						onChange={systolicAmountChangeHandler}
 					/>
+				</div>
+				<div className='new-pressure__control'>
+					<label>Bottom Number</label>
 					<input
 						type='number'
 						min='1'
 						step='1'
-						value={enteredAmount}
-						onChange={amountChangeHandler}
+						value={enteredDiastolicAmount}
+						onChange={diastolicAmountChangeHandler}
 					/>
 				</div>
 				<div className='new-pressure__control'>
 					<label>Unit</label>
-					<select value={enteredUnit} onChange={unitChangeHandler}>
-						<option value=''></option>
-						<option value='mmol/L'>mmol/L</option>
-						<option value='mg/dL'>mg/dL</option>
-					</select>
+					<input
+						type='text'
+						value={enteredUnit}
+						readOnly='true'
+						onChange={unitChangeHandler}
+					/>
 				</div>
 			</div>
 			<div className='new-pressure__actions'>

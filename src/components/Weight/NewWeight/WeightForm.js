@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import './WeightForm.css';
 
 const WeightForm = (props) => {
-	const [enteredUnit, setenteredUnit] = useState('');
+	const [enteredUnit, setenteredUnit] = useState('kg');
 	const [enteredAmount, setEnteredAmount] = useState('');
 	const [enteredDate, setEnteredDate] = useState('');
 

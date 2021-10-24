@@ -8,8 +8,8 @@ const PressureItem = (props) => {
 	return (
 		<Card className='pressure-item'>
 			<PressureDate date={props.date} />
-			<div className='pressure-item__kg'>
-				{props.amount} {props.unit}
+			<div className='pressure-item__measure'>
+				{props.systolicAmount} / {props.diastolicAmount} {props.unit}
 			</div>
 		</Card>
 	);
