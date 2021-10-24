@@ -3,12 +3,12 @@ import React, { useState } from 'react';
 import './GlucoseForm.css';
 
 const GlucoseForm = (props) => {
-	const [enteredUnit, setenteredUnit] = useState('');
+	const [enteredUnit, setEnteredUnit] = useState('');
 	const [enteredAmount, setEnteredAmount] = useState('');
 	const [enteredDate, setEnteredDate] = useState('');
 
 	const unitChangeHandler = (event) => {
-		setenteredUnit(event.target.value);
+		setEnteredUnit(event.target.value);
 	};
 
 	const amountChangeHandler = (event) => {
@@ -28,8 +28,8 @@ const GlucoseForm = (props) => {
 			date: new Date(enteredDate),
 		};
 
-		props.onSaveglucosData(glucosData);
-		setenteredUnit('');
+		props.onSaveGlucosData(glucosData);
+		setEnteredUnit('');
 		setEnteredAmount('');
 		setEnteredDate('');
 	};

@@ -6,9 +6,9 @@ import './NewGlucose.css';
 const NewGlucose = (props) => {
 	const [isEditing, setIsEditing] = useState(false);
 
-	const saveglucosDataHandler = (enteredglucosData) => {
+	const saveglucosDataHandler = (enteredGlucosData) => {
 		const glucosData = {
-			...enteredglucosData,
+			...enteredGlucosData,
 			id: Math.random().toString(),
 		};
 		props.onAddGlucos(glucosData);
@@ -30,7 +30,7 @@ const NewGlucose = (props) => {
 			)}
 			{isEditing && (
 				<GlucoseForm
-					onSaveglucosData={saveglucosDataHandler}
+					onSaveGlucosData={saveglucosDataHandler}
 					onCancel={stopEditingHandler}
 				/>
 			)}

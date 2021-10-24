@@ -11,7 +11,7 @@ const NewPressure = (props) => {
 			...enteredglucosData,
 			id: Math.random().toString(),
 		};
-		props.onAddGlucos(glucosData);
+		props.onAddPressure(glucosData);
 		setIsEditing(false);
 	};
 

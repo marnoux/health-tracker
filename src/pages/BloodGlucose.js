@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import BloodClucoses from '../components/Blood/Glucoses/Glucoses';
-import NewBloodGlucose from '../components/Blood/NewGlucoses/NewGlucose';
+import NewGlucose from '../components/Blood/NewGlucoses/NewGlucose';
 
 const DUMMY_GLUCOSES = [
 	{ id: 'e1', amount: 57, date: new Date(2020, 1, 14), unit: 'mmol/L' },
@@ -27,7 +27,7 @@ const BloodGlucose = () => {
 
 	return (
 		<div>
-			<NewBloodGlucose onAddBloodGlucos={addGlucosessHandler} />
+			<NewGlucose onAddGlucos={addGlucosessHandler} />
 			<BloodClucoses items={glucosess} />
 		</div>
 	);

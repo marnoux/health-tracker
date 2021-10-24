@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 
 import Card from '../../UI/Card';
 import PressuresFilter from './PressuresFilter';
-import './Pressures.css';
 import PressuresList from './PressuresList';
-import PressureChart from './PressureChart';
+
+import './Pressures.css';
 
 const Pressures = (props) => {
 	const [filteredYear, setFilteredYear] = useState('2021');
@@ -24,7 +24,6 @@ const Pressures = (props) => {
 					selected={filteredYear}
 					onChangeFilter={filterChangeHandler}
 				/>
-				{/* <PressureChart pressures={filteredPressures} /> */}
 				<PressuresList items={filteredPressures} />
 			</Card>
 		</li>
