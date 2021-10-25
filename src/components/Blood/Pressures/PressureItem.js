@@ -1,7 +1,7 @@
 import React from 'react';
 
 import PressureDate from './PressureDate';
-import Card from '../../UI/Card';
+import Card from '../../UI/Card/Card';
 import './PressureItem.css';
 
 const PressureItem = (props) => {

@@ -2,7 +2,7 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 
 import Welcome from './pages/Welcome';
-import MainHeader from './components/UI/MainHeader';
+import MainHeader from './components/UI/MainHeader/MainHeader';
 import Weight from './pages/Weight';
 import BloodGlucose from './pages/BloodGlucose';
 import BloodPressure from './pages/BloodPressure';

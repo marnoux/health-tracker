@@ -1,7 +1,7 @@
 import React from 'react';
 
 import GlucoseDate from './GlucoseDate';
-import Card from '../../UI/Card';
+import Card from '../../UI/Card/Card';
 import './GlucoseItem.css';
 
 const GlucoseItem = (props) => {

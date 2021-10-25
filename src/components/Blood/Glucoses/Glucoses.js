@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import Card from '../../UI/Card';
+import Card from '../../UI/Card/Card';
 import GlucosesFilter from './GlucosesFilter';
 import './Glucoses.css';
 import GlucosesList from './GlucosesList';
