@@ -16,14 +16,14 @@ const App = () => {
 					<Route exact path='/'>
 						<Welcome />
 					</Route>
-					<Route path='/weight'>
-						<Weight />
-					</Route>
 					<Route path='/glucose'>
 						<BloodGlucose />
 					</Route>
 					<Route path='/pressure'>
 						<BloodPressure />
+					</Route>
+					<Route path='/weight'>
+						<Weight />
 					</Route>
 				</main>
 			</div>

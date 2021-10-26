@@ -7,12 +7,7 @@ const MainHeader = () => {
 			<nav>
 				<ul>
 					<li>
-						<NavLink to='/'>Welcome</NavLink>
-					</li>
-					<li>
-						<NavLink activeClassName={classes.active} to='/weight'>
-							Weight
-						</NavLink>
+						<NavLink to='/'>Home</NavLink>
 					</li>
 					<li>
 						<NavLink activeClassName={classes.active} to='/glucose'>
@@ -22,6 +17,11 @@ const MainHeader = () => {
 					<li>
 						<NavLink activeClassName={classes.active} to='/pressure'>
 							Blood Pressure
+						</NavLink>
+					</li>
+					<li>
+						<NavLink activeClassName={classes.active} to='/weight'>
+							Weight
 						</NavLink>
 					</li>
 				</ul>
