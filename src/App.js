@@ -13,6 +13,9 @@ const App = () => {
 			<div className='App'>
 				<MainHeader />
 				<main>
+					<Route exact path='/'>
+						<Welcome />
+					</Route>
 					<Route path='/weight'>
 						<Weight />
 					</Route>
@@ -21,9 +24,6 @@ const App = () => {
 					</Route>
 					<Route path='/pressure'>
 						<BloodPressure />
-					</Route>
-					<Route path='/'>
-						<Welcome />
 					</Route>
 				</main>
 			</div>
