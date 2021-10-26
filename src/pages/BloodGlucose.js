@@ -17,18 +17,18 @@ const DUMMY_GLUCOSES = [
 ];
 
 const BloodGlucose = () => {
-	const [glucosess, setglucosess] = useState(DUMMY_GLUCOSES);
+	const [glucoses, setGlucoses] = useState(DUMMY_GLUCOSES);
 
-	const addGlucosessHandler = (glucoses) => {
-		setglucosess((prevGlucoses) => {
+	const addGlucosesHandler = (glucoses) => {
+		setGlucoses((prevGlucoses) => {
 			return [glucoses, ...prevGlucoses];
 		});
 	};
 
 	return (
 		<div>
-			<NewGlucose onAddGlucos={addGlucosessHandler} />
-			<BloodClucoses items={glucosess} />
+			<NewGlucose onAddGlucose={addGlucosesHandler} />
+			<BloodClucoses items={glucoses} />
 		</div>
 	);
 };

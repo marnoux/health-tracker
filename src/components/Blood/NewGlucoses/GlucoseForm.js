@@ -3,10 +3,12 @@ import React, { useState } from 'react';
 import './GlucoseForm.css';
 
 const GlucoseForm = (props) => {
+	// Split into state slices
 	const [enteredUnit, setEnteredUnit] = useState('');
 	const [enteredAmount, setEnteredAmount] = useState('');
 	const [enteredDate, setEnteredDate] = useState('');
 
+	// Create event handler for each state slice
 	const unitChangeHandler = (event) => {
 		setEnteredUnit(event.target.value);
 	};
@@ -22,21 +24,23 @@ const GlucoseForm = (props) => {
 	const submitHandler = (event) => {
 		event.preventDefault();
 
-		const glucosData = {
+		// Save state
+		const glucoseData = {
 			unit: enteredUnit,
 			amount: +enteredAmount,
 			date: new Date(enteredDate),
 		};
 
-		props.onSaveGlucosData(glucosData);
+		// Clear after save
+		props.onSaveGlucoseData(glucoseData);
 		setEnteredUnit('');
 		setEnteredAmount('');
 		setEnteredDate('');
 	};
 	return (
 		<form onSubmit={submitHandler}>
-			<div className='new-glucos__controls'>
-				<div className='new-glucos__control'>
+			<div className='new-glucose__controls'>
+				<div className='new-glucose__control'>
 					<label>Date</label>
 					<input
 						type='date'
@@ -46,8 +50,8 @@ const GlucoseForm = (props) => {
 						onChange={dateChangeHandler}
 					/>
 				</div>
-				<div className='new-glucos__control'>
-					<label>Blood Glucos Level</label>
+				<div className='new-glucose__control'>
+					<label>Blood Glucose Level</label>
 					<input
 						type='number'
 						min='1'
@@ -56,7 +60,7 @@ const GlucoseForm = (props) => {
 						onChange={amountChangeHandler}
 					/>
 				</div>
-				<div className='new-glucos__control'>
+				<div className='new-glucose__control'>
 					<label>Unit</label>
 					<select value={enteredUnit} onChange={unitChangeHandler}>
 						<option value=''></option>
@@ -65,7 +69,7 @@ const GlucoseForm = (props) => {
 					</select>
 				</div>
 			</div>
-			<div className='new-glucos__actions'>
+			<div className='new-glucose__actions'>
 				<button type='Button' onClick={props.onCancel}>
 					Cancel
 				</button>

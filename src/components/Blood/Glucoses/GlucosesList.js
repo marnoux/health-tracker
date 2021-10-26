@@ -1,25 +1,27 @@
 import React from 'react';
 
-import GlucoseItem from './GlucoseItem';
+import Item from '../../UI/Item/Item';
 import './GlucosesList.css';
 
 const GlucosesList = (props) => {
+	// If the filtered year has no data, tell the user
 	if (props.items.length === 0) {
 		return (
-			<h2 className='glucoss-list__fallback'>
+			<h2 className='glucose-list__fallback'>
 				Nothing captured for selected period.
 			</h2>
 		);
 	}
 
+	// If the filtered year has data, display it to the user
 	return (
-		<ul className='glucoss-list'>
-			{props.items.map((glucos) => (
-				<GlucoseItem
-					key={glucos.id}
-					unit={glucos.unit}
-					amount={glucos.amount}
-					date={glucos.date}
+		<ul className='glucose-list'>
+			{props.items.map((glucose) => (
+				<Item
+					key={glucose.id}
+					unit={glucose.unit}
+					amount={glucose.amount}
+					date={glucose.date}
 				/>
 			))}
 		</ul>

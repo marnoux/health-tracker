@@ -18,6 +18,7 @@ const WeightsChart = (props) => {
 		{ label: 'Dec', value: 0 },
 	];
 
+	// Iterate through items to populate chart
 	for (const weight of props.weights) {
 		const weightMonth = weight.date.getMonth();
 		chartDataPoints[weightMonth].value += weight.amount;

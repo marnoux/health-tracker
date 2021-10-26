@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-
+import Average from '../../UI/Average/Average';
 import Card from '../../UI/Card/Card';
 import WeightsFilter from './WeightsFilter';
-import './Weights.css';
 import WeightsList from './WeightsList';
 import WeightChart from './WeightChart';
-import WeightAverage from './WeightAverage';
+import './Weights.css';
 
 const Weights = (props) => {
 	const [filteredYear, setFilteredYear] = useState('2021');
@@ -27,7 +26,7 @@ const Weights = (props) => {
 				/>
 				<WeightChart weights={filteredWeights} />
 				<WeightsList items={filteredWeights} />
-				<WeightAverage amounts={filteredWeights} />
+				<Average amounts={filteredWeights} />
 			</Card>
 		</li>
 	);

@@ -1,4 +1,4 @@
-.glucos-date {
+.date {
 	display: flex;
 	flex-direction: column;
 	width: 20rem;
@@ -12,16 +12,16 @@
 	margin-right: 0.5rem;
 }
 
-.glucos-date__month {
+.date__month {
 	font-size: 0.75rem;
 	font-weight: bold;
 }
 
-.glucos-date__year {
+.date__year {
 	font-size: 0.75rem;
 }
 
-.glucos-date__day {
+.date__day {
 	font-size: 1.5rem;
 	font-weight: bold;
 }

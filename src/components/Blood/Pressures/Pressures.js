@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
-
 import Card from '../../UI/Card/Card';
 import PressuresFilter from './PressuresFilter';
 import PressuresList from './PressuresList';
 import PressureAverage from './PressureAverage';
-
 import './Pressures.css';
 
 const Pressures = (props) => {

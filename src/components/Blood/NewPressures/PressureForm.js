@@ -3,13 +3,13 @@ import React, { useState } from 'react';
 import './PressureForm.css';
 
 const PressureForm = (props) => {
-	const [enteredUnit, setenteredUnit] = useState('mmHg');
+	const [enteredUnit, setEnteredUnit] = useState('mmHg');
 	const [enteredSystolicAmount, setEnteredSystolicAmount] = useState('');
 	const [enteredDiastolicAmount, setEnteredDiastolicAmount] = useState('');
 	const [enteredDate, setEnteredDate] = useState('');
 
 	const unitChangeHandler = (event) => {
-		setenteredUnit(event.target.value);
+		setEnteredUnit(event.target.value);
 	};
 
 	const systolicAmountChangeHandler = (event) => {
@@ -33,8 +33,8 @@ const PressureForm = (props) => {
 			date: new Date(enteredDate),
 		};
 
-		props.onSaveglucosData(pressureData);
-		setenteredUnit('');
+		props.onSavePressureData(pressureData);
+		setEnteredUnit('');
 		setEnteredSystolicAmount('');
 		setEnteredDiastolicAmount('');
 		setEnteredDate('');
@@ -76,8 +76,8 @@ const PressureForm = (props) => {
 					<label>Unit</label>
 					<input
 						type='text'
+						readOnly='1'
 						value={enteredUnit}
-						readOnly='true'
 						onChange={unitChangeHandler}
 					/>
 				</div>

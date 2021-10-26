@@ -16,7 +16,7 @@ const MainHeader = () => {
 					</li>
 					<li>
 						<NavLink activeClassName={classes.active} to='/glucose'>
-							Blood Clucose
+							Blood Glucose
 						</NavLink>
 					</li>
 					<li>

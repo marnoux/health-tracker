@@ -6,15 +6,17 @@ import './NewWeight.css';
 const NewWeight = (props) => {
 	const [isEditing, setIsEditing] = useState(false);
 
-	const saveweightDataHandler = (enteredweightData) => {
+	const saveWeightDataHandler = (enteredWeightData) => {
 		const weightData = {
-			...enteredweightData,
+			...enteredWeightData,
+			// Use Math.random to create a quick unique identifier
 			id: Math.random().toString(),
 		};
 		props.onAddWeight(weightData);
 		setIsEditing(false);
 	};
 
+	// Set the isEditing state to show or hide the input form
 	const startEditingHandler = () => {
 		setIsEditing(true);
 	};
@@ -28,7 +30,7 @@ const NewWeight = (props) => {
 			{!isEditing && <button onClick={startEditingHandler}>Log Weight</button>}
 			{isEditing && (
 				<WeightForm
-					onSaveweightData={saveweightDataHandler}
+					onSaveWeightData={saveWeightDataHandler}
 					onCancel={stopEditingHandler}
 				/>
 			)}

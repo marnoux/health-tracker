@@ -6,15 +6,17 @@ import './NewPressure.css';
 const NewPressure = (props) => {
 	const [isEditing, setIsEditing] = useState(false);
 
-	const saveglucosDataHandler = (enteredglucosData) => {
-		const glucosData = {
-			...enteredglucosData,
+	const savePressureDataHandler = (enteredPressureData) => {
+		const pressureData = {
+			...enteredPressureData,
+			// Use Math.random to create a quick unique identifier
 			id: Math.random().toString(),
 		};
-		props.onAddPressure(glucosData);
+		props.onAddPressure(pressureData);
 		setIsEditing(false);
 	};
 
+	// Set the isEditing state to show or hide the input form
 	const startEditingHandler = () => {
 		setIsEditing(true);
 	};
@@ -24,13 +26,13 @@ const NewPressure = (props) => {
 	};
 
 	return (
-		<div className='new-glucos'>
+		<div className='new-pressure'>
 			{!isEditing && (
 				<button onClick={startEditingHandler}>Log Blood Pressure</button>
 			)}
 			{isEditing && (
 				<PressureForm
-					onSaveglucosData={saveglucosDataHandler}
+					onSavePressureData={savePressureDataHandler}
 					onCancel={stopEditingHandler}
 				/>
 			)}

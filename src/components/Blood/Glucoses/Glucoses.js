@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-
+import Average from '../../UI/Average/Average';
 import Card from '../../UI/Card/Card';
-import GlucosesFilter from './GlucosesFilter';
-import './Glucoses.css';
-import GlucosesList from './GlucosesList';
 import GlucoseChart from './GlucoseChart';
-import GlucoseAverage from './GlucoseAverage';
+import GlucosesFilter from './GlucosesFilter';
+import GlucosesList from './GlucosesList';
+import './Glucoses.css';
 
 const Glucoses = (props) => {
 	const [filteredYear, setFilteredYear] = useState('2021');
@@ -14,20 +13,20 @@ const Glucoses = (props) => {
 		setFilteredYear(selectedYear);
 	};
 
-	const filteredGlucoses = props.items.filter((glucos) => {
-		return glucos.date.getFullYear().toString() === filteredYear;
+	const filteredGlucoses = props.items.filter((glucose) => {
+		return glucose.date.getFullYear().toString() === filteredYear;
 	});
 
 	return (
 		<li>
-			<Card className='glucoss'>
+			<Card className='glucose'>
 				<GlucosesFilter
 					selected={filteredYear}
 					onChangeFilter={filterChangeHandler}
 				/>
-				<GlucoseChart glucoss={filteredGlucoses} />
+				<GlucoseChart glucose={filteredGlucoses} />
 				<GlucosesList items={filteredGlucoses} />
-				<GlucoseAverage amounts={filteredGlucoses} />
+				<Average amounts={filteredGlucoses} />
 			</Card>
 		</li>
 	);

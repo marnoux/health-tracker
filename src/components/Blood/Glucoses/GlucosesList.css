@@ -1,9 +1,9 @@
-.glucoss-list {
+.glucose-list {
   list-style: none;
   padding: 0;
 }
 
-.glucoss-list__fallback {
+.glucose-list__fallback {
   color: white;
   text-align: center;
 }

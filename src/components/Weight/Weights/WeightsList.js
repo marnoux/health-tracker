@@ -1,6 +1,6 @@
 import React from 'react';
 
-import WeightItem from './WeightItem';
+import Item from '../../UI/Item/Item';
 import './WeightsList.css';
 
 const WeightsList = (props) => {
@@ -15,7 +15,7 @@ const WeightsList = (props) => {
 	return (
 		<ul className='weights-list'>
 			{props.items.map((weight) => (
-				<WeightItem
+				<Item
 					key={weight.id}
 					unit={weight.unit}
 					amount={weight.amount}

@@ -3,6 +3,7 @@ import React from 'react';
 import Chart from '../../UI/Chart/Chart';
 
 const WeightsChart = (props) => {
+	// Set datapoints for chart to each month of the year
 	const chartDataPoints = [
 		{ label: 'Jan', value: 0 },
 		{ label: 'Feb', value: 0 },
@@ -18,9 +19,10 @@ const WeightsChart = (props) => {
 		{ label: 'Dec', value: 0 },
 	];
 
-	for (const glucos of props.glucoss) {
-		const glucosMonth = glucos.date.getMonth();
-		chartDataPoints[glucosMonth].value += glucos.amount;
+	// Iterate through items to populate chart
+	for (const item of props.glucose) {
+		const glucoseMonth = item.date.getMonth();
+		chartDataPoints[glucoseMonth].value += item.amount;
 	}
 
 	return <Chart dataPoints={chartDataPoints} />;

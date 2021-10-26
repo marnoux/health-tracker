@@ -6,15 +6,17 @@ import './NewGlucose.css';
 const NewGlucose = (props) => {
 	const [isEditing, setIsEditing] = useState(false);
 
-	const saveglucosDataHandler = (enteredGlucosData) => {
-		const glucosData = {
-			...enteredGlucosData,
+	const saveGlucoseDataHandler = (enteredGlucoseData) => {
+		const glucoseData = {
+			...enteredGlucoseData,
+			// Use Math.random to create a quick unique identifier
 			id: Math.random().toString(),
 		};
-		props.onAddGlucos(glucosData);
+		props.onAddGlucose(glucoseData);
 		setIsEditing(false);
 	};
 
+	// Set the isEditing state to show or hide the input form
 	const startEditingHandler = () => {
 		setIsEditing(true);
 	};
@@ -24,13 +26,13 @@ const NewGlucose = (props) => {
 	};
 
 	return (
-		<div className='new-glucos'>
+		<div className='new-glucose'>
 			{!isEditing && (
-				<button onClick={startEditingHandler}>Log Blood Glucos</button>
+				<button onClick={startEditingHandler}>Log Blood Glucose</button>
 			)}
 			{isEditing && (
 				<GlucoseForm
-					onSaveGlucosData={saveglucosDataHandler}
+					onSaveGlucoseData={saveGlucoseDataHandler}
 					onCancel={stopEditingHandler}
 				/>
 			)}

@@ -3,12 +3,12 @@ import React, { useState } from 'react';
 import './WeightForm.css';
 
 const WeightForm = (props) => {
-	const [enteredUnit, setenteredUnit] = useState('kg');
+	const [enteredUnit, setEnteredUnit] = useState('kg');
 	const [enteredAmount, setEnteredAmount] = useState('');
 	const [enteredDate, setEnteredDate] = useState('');
 
 	const titleChangeHandler = (event) => {
-		setenteredUnit(event.target.value);
+		setEnteredUnit(event.target.value);
 	};
 
 	const amountChangeHandler = (event) => {
@@ -28,8 +28,8 @@ const WeightForm = (props) => {
 			date: new Date(enteredDate),
 		};
 
-		props.onSaveweightData(weightData);
-		setenteredUnit('');
+		props.onSaveWeightData(weightData);
+		setEnteredUnit('');
 		setEnteredAmount('');
 		setEnteredDate('');
 	};

@@ -1,9 +1,9 @@
-.glucoss-filter {
+.glucose-filter {
 	color: white;
 	padding: 0 1rem;
 }
 
-.glucoss-filter__control {
+.glucose-filter__control {
 	display: flex;
 	width: 100%;
 	align-items: center;
@@ -11,12 +11,12 @@
 	margin: 1rem 0;
 }
 
-.glucoss-filter label {
+.glucose-filter label {
 	font-weight: bold;
 	margin-bottom: 0.5rem;
 }
 
-.glucoss-filter select {
+.glucose-filter select {
 	font: inherit;
 	padding: 0.5rem 3rem;
 	font-weight: bold;
