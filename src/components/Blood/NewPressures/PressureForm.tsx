@@ -74,16 +74,11 @@ const PressureForm = (props) => {
 				</div>
 				<div className='new-pressure__control'>
 					<label>Unit</label>
-					<input
-						type='text'
-						readOnly='1'
-						value={enteredUnit}
-						onChange={unitChangeHandler}
-					/>
+					<input type='text' readOnly value={enteredUnit} onChange={unitChangeHandler} />
 				</div>
 			</div>
 			<div className='new-pressure__actions'>
-				<button type='Button' onClick={props.onCancel}>
+				<button type='button' onClick={props.onCancel}>
 					Cancel
 				</button>
 				<button type='submit'>Log</button>

@@ -70,7 +70,7 @@ const GlucoseForm = (props) => {
 				</div>
 			</div>
 			<div className='new-glucose__actions'>
-				<button type='Button' onClick={props.onCancel}>
+				<button type='button' onClick={props.onCancel}>
 					Cancel
 				</button>
 				<button type='submit'>Log</button>

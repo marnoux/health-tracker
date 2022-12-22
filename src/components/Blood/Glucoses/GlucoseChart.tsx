@@ -1,5 +1,3 @@
-import React from 'react';
-
 import Chart from '../../UI/Chart/Chart';
 
 const WeightsChart = (props) => {
