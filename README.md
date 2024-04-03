@@ -1,8 +1,4 @@
-# Castor Coding Assessment
-
-
-
-### Welcome to my take on the Caster Coding assessment.  I hope you have as much fun reviewing the project as I had coding it.
+# Health Tracker
 
 #### Built with:
 - node version 14.18.1
