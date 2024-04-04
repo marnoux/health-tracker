@@ -40,13 +40,5 @@ Even though it was not a requirement, the app is fully responsive and can be tes
 
 ![smallScreen](https://i.imgur.com/7KLMd3O.png)
 
-### *Validation*
-There is no input validation on the fields other than basic built in HTML type validation
-
-### *Usage of TypeScript*
-I decided not to use TypeScript due to the small size of the project  
-
-If you have any questions that require an explanation, please feel free to contact me [here](mailto:marnouxmanser@gmail.com).
-
 # Thank you 
 ## Thank you for taking the time to review my project
